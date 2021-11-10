@@ -1,4 +1,4 @@
-package zcc.javaPractice.aspect;
+package zcc.javaPractice.AOPandIOC.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.stereotype.Component;
@@ -24,6 +24,7 @@ public class Cut {
     public void around(ProceedingJoinPoint pj){
         System.out.println("around.......before.....");
         try {
+            //必须有，才能继续执行
             pj.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();

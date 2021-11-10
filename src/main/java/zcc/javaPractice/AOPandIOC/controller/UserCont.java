@@ -1,4 +1,4 @@
-package zcc.javaPractice.controller;
+package zcc.javaPractice.AOPandIOC.controller;
 
 import org.springframework.stereotype.Controller;
 

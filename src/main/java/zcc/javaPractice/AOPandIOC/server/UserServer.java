@@ -1,6 +1,8 @@
-package zcc.javaPractice.server;
+package zcc.javaPractice.AOPandIOC.server;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import zcc.javaPractice.AOPandIOC.controller.UserCont;
 
 /**
  * @author ：zcc
@@ -11,7 +13,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServer {
+//    @Resource //第三方插件
+    @Autowired
+    UserCont userCont;
+
     public void text(){
+        userCont.text();
         System.out.println("server user...........");
     }
 }
